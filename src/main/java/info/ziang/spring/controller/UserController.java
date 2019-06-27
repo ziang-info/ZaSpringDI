@@ -5,7 +5,7 @@ import info.ziang.spring.service.UserService;
 
 public class UserController {
 
-    @Inject
+    @Inject("UserService")
     private UserService userService;
 
     public void save() {

@@ -23,6 +23,8 @@ public class BeanFactory {
         for (Field field : fields) {//查找字段中含有依赖注入的字段 存在就进行注入
             Inject inject = field.getAnnotation(Inject.class);
             if (inject != null) {
+                System.out.println("Inject Value: " + inject.value() + " for " + clazz.getName());
+
                 Object object = getBean(field.getType());
                 if (!field.isAccessible())
                     field.setAccessible(true);

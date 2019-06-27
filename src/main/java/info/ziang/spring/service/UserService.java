@@ -6,10 +6,10 @@ import info.ziang.spring.di.Inject;
 
 public class UserService {
 
-    @Inject
+    @Inject("UserDao")
     private UserDao userDao;
 
-    @Inject
+    @Inject("ClassDao")
     private ClassDao classDao;
 
     public void save() {
